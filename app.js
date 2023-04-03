@@ -18,10 +18,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // require("dotenv").config();
 const config = require("./config/database")
  
-const employeeRoutes = require("./routes/employeeRoutes")
-const about = require("./routes/about")
+const welcome = require("./routes/welcome")
+const farmerOne = require("./routes/farmerOne")
 const contact = require("./routes/contact")
-const registerRoutes = require("./routes/registerRoutes")
+const register = require("./routes/register")
 
 // creating a connect btn the control and database
 mongoose.connect(config.database,{
@@ -49,11 +49,11 @@ app.use(express.static(path.join(__dirname, "public")));
 
 
 
-app.use("/",employeeRoutes)
-app.use("/",about)
+app.use("/",welcome)
+app.use("/",farmerOne)
 app.use("/",contact)
-app.use("/",registerRoutes)
+app.use("/",register)
 
 //this should always be your last line in your server file
-app.listen(3001, () => console.log('listening on port 3001'));
+app.listen(3000, () => console.log('listening on port 3000'));
 
