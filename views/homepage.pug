@@ -15,7 +15,7 @@
     height: 100vh;
     background-position: center;
     background-size: cover;
-    background-image: url("/ufarm\ images/cover.jpg");
+    background-image: url("/public\ images/cover.jpg"); 
     }
 
     .navbar{
@@ -252,15 +252,15 @@
   .menu
     ul
       li
-        a(href="./contact") HOME
+        a(href="/contact") HOME
       li
-        a(href="./products") PRODUCTS
+        a(href="/products") PRODUCTS
       li
-        a(href="./register") FARMERS/REGISTRATION
+        a(href="/register") FARMERS
   .Search
     input.srch(type='search' names='' placeholder='Type To Text')
     a(href='#')
-      button.btn Search
+      button.btn Search   
   .content
     h1 Welcome To U-FARM
     h4 Healthy from the Heartland
@@ -275,10 +275,8 @@
     input(type='email' name='email' placeholder='Enter Email Here')
     input(type='password' name='' placeholder='Enter Password Here')
     button.btn
-      a(href='#') Login
+      a(href="/login") Login
     p.link Don&apos;t have an account
     br
-    a(href='signUp.html') Sign Up Here&quot;
+    a(href="/signup") Sign Up Here&quot;
     p.liw Log in with
-    button.cn
-      a(href='#') Join Us

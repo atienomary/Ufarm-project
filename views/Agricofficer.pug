@@ -1,0 +1,181 @@
+doctype html
+head
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  // Bootstrap CSS
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous')
+  title AO DASHBOARD
+.col-md-12
+  // As a heading
+  nav.navbar.navbar-dark.bg-dark
+    .container-fluid
+      span.navbar-brand.mb-0.h1 Agricultural Officer
+.container(style='margin-left: -10px;')
+  .row
+    .col-md-4
+      .d-flex.flex-column.flex-shrink-0.p-3.bg-light(style='width: 280px; height: 1030px; background: transparent;')
+        a.d-flex.align-items-center.mb-3.mb-md-0.me-md-auto.link-dark.text-decoration-none(href='/')
+          svg.bi.me-2(width='40' height='32')
+            use(xlink:href='#bootstrap')
+          // <span class="fs-4"></span>
+          img(src='/images/istockphoto-1369012070-170667a.jpg' style='height: 60px;')
+          span UFARM
+        hr
+        ul.nav.nav-pills.flex-column.mb-auto
+          li.nav-item
+            svg.bi.me-2(width='16' height='16')
+              use(xlink:href='#home')
+            |                   Home
+          li
+            a.nav-link.link-dark(href='./RegformFO.html')
+              svg.bi.me-2(width='16' height='16')
+                use(xlink:href='#speedometer2')
+              |                   Register farmer One
+          li
+            a.nav-link.link-dark(href='#')
+              svg.bi.me-2(width='16' height='16')
+                use(xlink:href='#table')
+              |                   Appoint Farmer One
+          li
+            a.nav-link.link-dark(href='#')
+              svg.bi.me-2(width='16' height='16')
+                use(xlink:href='#grid')
+              |                   Products
+          li
+            a.nav-link.link-dark(href='#')
+              svg.bi.me-2(width='16' height='16')
+                use(xlink:href='#people-circle')
+              |                   Customers
+        hr
+        .dropdown
+          a#dropdownUser2.d-flex.align-items-center.link-dark.text-decoration-none.dropdown-toggle(href='#' data-bs-toggle='dropdown' aria-expanded='false')
+            img.rounded-circle.me-2(src='/images/istockphoto-1033669508-170667a.jpg' alt='' width='32' height='32')
+            strong fat
+          ul.dropdown-menu.text-small.shadow(aria-labelledby='dropdownUser2')
+            li
+              a.dropdown-item(href='#') New project...
+            li
+              a.dropdown-item(href='#') Settings
+            li
+              a.dropdown-item(href='#') Profile
+            li
+              hr.dropdown-divider
+            li
+              a.dropdown-item(href='/landingpage.html') Sign out
+    // <div class="row">
+    .col-md-8
+      h1 REGISTERED FARMER ONE
+      table.table
+        thead
+          tr
+            th(scope='col') NO
+            th(scope='col') First Name
+            th(scope='col') Last Name
+            th(scope='col') FO ID
+            th(scope='col') Update Details
+        tbody
+          tr
+            th(scope='row') 1
+            td Florence
+            td Kizza
+            td FO 4567
+          tr
+            th(scope='row') 2
+            td Brenda
+            td Lelega
+            td FO 2345
+          tr
+            th(scope='row') 3
+            td Martha
+            td Aheebwa
+            td FO 7890
+          tr
+            th(scope='row') 4
+            td Sarah
+            td Namukasa
+            td FO 7890
+          tr
+            th(scope='row') 5
+            td Agnes
+            td Babirye
+            td FO 87500
+          tr
+            th(scope='row') 6
+            td Ben
+            td Wamala
+            td FO 8909
+          tr
+            th(scope='row') 7
+            td Derrick
+            td Kasule
+            td FO 55344
+          tr
+            th(scope='row') 8
+            td Elizabeth
+            td Komusinguzi
+            td FO 8765
+          tr
+            th(scope='row') 9
+            td Elijah
+            td Kasujja
+            td FO 3423
+      h1 APPOINTED FARMER ONES
+      table.table
+        thead
+          tr
+            th(scope='col') NO
+            th(scope='col') First Name
+            th(scope='col') Last Name
+            th(scope='col') FO ID
+            th(scope='col') Ward represented
+        tbody
+          tr
+            th(scope='row') 1
+            td Florence
+            td Kizza
+            td FO 4567
+          tr
+            th(scope='row') 2
+            td Brenda
+            td Lelega
+            td FO 2345
+          tr
+            th(scope='row') 3
+            td Martha
+            td Aheebwa
+            td FO 7890
+          tr
+            th(scope='row') 4
+            td Sarah
+            td Namukasa
+            td FO 7890
+          tr
+            th(scope='row') 5
+            td Agnes
+            td Babirye
+            td FO 87500
+          tr
+            th(scope='row') 6
+            td Ben
+            td Wamala
+            td FO 8909
+          tr
+            th(scope='row') 7
+            td Derrick
+            td Kasule
+            td FO 55344
+          tr
+            th(scope='row') 8
+            td Elizabeth
+            td Komusinguzi
+            td FO 8765
+          tr
+            th(scope='row') 9
+            td Elijah
+            td Kasujja
+            td FO 3423
+    // <div class="row">
+// <div class="container-fluid" style="align-items: center; ">
+// Option 1: Bootstrap Bundle with Popper
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' crossorigin='anonymous')

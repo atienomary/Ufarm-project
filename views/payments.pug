@@ -1,0 +1,69 @@
+doctype html
+head
+  link(rel='stylesheet' href='style.css')
+  title Farmers
+style.
+  body {
+  background-image: url("ufarm\ images/ufarm4.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  }
+  h1{
+  color:#0a0a0a ;
+  }
+  label {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #0d0e0d;
+  }
+h1 Payments
+form(action='https://example.com/charge' method='post')
+  label(for='name') Full Name:
+  br
+  input#name(type='text' name='name' required='')
+  br
+  br
+  label(for='email') Email:
+  br
+  input#email(type='email' name='email' required='')
+  br
+  br
+  label(for='address') Address:
+  br
+  textarea#address(name='address' rows='4' cols='50' required='')
+  br
+  br
+  label(for='card') Card Number:
+  br
+  input#card(type='text' name='card' required='')
+  br
+  br
+  label(for='exp') Expiration Date:
+  br
+  input#exp(type='text' name='exp' placeholder='MM/YY' required='')
+  br
+  br
+  label(for='cvv') CVV:
+  br
+  input#cvv(type='text' name='cvv' required='')
+  br
+  br
+  input(type='submit' value='Pay Now')
+form
+  label(for='name') Name:
+  input#name(type='text' name='name' required='')
+  label(for='phone') Phone Number:
+  input#phone(type='tel' name='phone' required='')
+  label(for='network') Network:
+  select#network(name='network')
+    option(value='mtn') MTN
+    option(value='airtel') Airtel
+  label(for='amount') Amount:
+  input#amount(type='number' name='amount' required='')
+  label(for='details') Details:
+  textarea#details(name='details')
+  input(type='submit' value='Pay Now')

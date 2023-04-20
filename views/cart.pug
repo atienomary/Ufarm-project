@@ -1,0 +1,83 @@
+doctype html
+head
+  title My Cart
+  link(rel='stylesheet' type='text/css' href='style.css')
+style.
+  main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  }
+  h1 {
+  text-align: center;
+  padding: 20px 0;
+  }
+  table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  background-color: #fff;
+  }
+  th {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+  }
+  td {
+  padding: 10px;
+  }
+  tr:nth-child(even) {
+  background-color: #f2f2f2;
+  }
+  input[type=number] {
+  width: 50px;
+  }
+  tfoot td {
+  font-weight: bold;
+  }
+  button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  }
+h1 My Cart
+table
+  thead
+    tr
+      th Product Name
+      th Price
+      th Quantity
+      th Subtotal
+  tbody
+    tr
+      td Product 1
+      td $9.99
+      td
+        input(type='number' value='1')
+      td $9.99
+    tr
+      td Product 2
+      td $19.99
+      td
+        input(type='number' value='2')
+      td $39.98
+    tr
+      td Product 3
+      td $14.99
+      td
+        input(type='number' value='3')
+      td $44.97
+    tr
+      td(colspan='3') Total:
+      td $94.94
+button#checkout Checkout

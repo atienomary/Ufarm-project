@@ -1,3 +1,4 @@
+//07-04-2023
 doctype html
 head
   meta(charset='UTF-8')
@@ -6,28 +7,64 @@ head
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   title Document
 .container
-  form#contact_form.well.form-horizontal( name="login" action='/login' method='post')
-    fieldset
-      // Form Name
-      legend
-        center
-          h2
-            b Farmer One Dashboard
-      br
-      br
-      br
-      br
-      form(method="POST" action='/logout')
-        button.btn(type= 'submit' width='100px') Signout
-  
+  fieldset
+    // Form Name
+    legend
+      center
+        h2
+          b Farmer One Dashboard
+    br
       
-      // Button
-      //.form-group
-        label.col-md-4.control-label
-        .col-md-4
+    .container
+
+      h3    
+        //- | Total fess paid: #{total.totalFees}
+      fieldset 
+        //- h5  
+        //-   | List of Urban Farmers in Ward #{farmerWard}
+        //-   br
+        //-   br
+        //-   | Number of Urban Farmers in ward #{farmerWard}: #{activeFarmers}
           br
-          button.btn.btn-warning(type='submit') SUBMIT 
-            
+        table.table
+            thead.thead-dark
+                tr
+                    th(scope='col') Name
+                    //- th(scope='col') Lastname
+                    th(scope='col') Unique ID
+                    th(scope='col') Dob
+                    th(scope='col') Gender
+                    th(scope='col') Email
+                    th(scope='col') Phone number
+                    th(scope='col') Address
+                    th(scope='col') Ward
+                    th(scope='col') Action
+                    th(scope='col') Action
+            tbody
+            if urbanFarmers.length 
+                each urbanFarmer in urbanFarmers
+                    tr
+                        td #{urbanFarmer.firstname} #{urbanFarmer.lastname}
+                        td #{urbanFarmer.username}
+                        td #{urbanFarmer.dob}
+                        td #{urbanFarmer.gender}
+                        td #{urbanFarmer.email}
+                        td #{urbanFarmer.phonenumber}
+                        td #{urbanFarmer.address}
+                        td #{urbanFarmer.ward}
+                        td 
+                        //-     form(method='post', action='/students/delete')
+                        //-         input(type='hidden', name="id", value=student._id)
+                        //-         button.btn.btn-danger(type='submit') Delete
+
+                        //- td        
+                        //-     a.btn.btn-dark.btn-block(href='/edit_student/'+student._id) Edit
+            else 
+                p 
+                  h4 There are no Urban Farmers registered yet
+
+
+    
 
 script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
 script(src='https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
